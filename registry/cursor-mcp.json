@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "sentrul": {
+      "command": "npx",
+      "args": ["-y", "sentrul-mcp-server"],
+      "env": {
+        "SENTRUL_API_KEY": ""
+      }
+    }
+  }
+}

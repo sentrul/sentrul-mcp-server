@@ -1,0 +1,47 @@
+id: sentrul-mcp-server
+name: Sentrul
+description: |
+  Run Sentrul research, compliance, and trace-lookup agents from any MCP-aware
+  client. 257 production agents behind one gateway.
+  Free tier auto-provisions on first use — no signup required.
+homepage: https://sentrul.com
+repository: https://github.com/sentrul/sentrul-mcp-server
+license: MIT
+author: Sentrul
+keywords:
+  - research
+  - compliance
+  - pii
+  - pci
+  - hipaa
+  - gdpr
+  - langfuse
+  - observability
+  - agents
+
+install:
+  npm: sentrul-mcp-server
+  command: npx
+  args:
+    - "-y"
+    - sentrul-mcp-server
+
+config:
+  - name: SENTRUL_API_KEY
+    description: Optional. Free tier auto-provisions on first use. Paid tiers override with a tenant-scoped key.
+    required: false
+    secret: true
+  - name: SENTRUL_API_URL
+    description: Gateway base URL. Defaults to https://app.sentrul.com.
+    required: false
+
+tools:
+  - name: sentrul_research
+    description: Fetch a URL and run Sentrul's research agent. Returns summary, entities, claims, and a public Langfuse trace URL.
+  - name: sentrul_compliance_scan
+    description: Scan text for PII, PCI, HIPAA, and GDPR compliance signals. Returns per-framework findings.
+  - name: sentrul_trace_lookup
+    description: Look up a Langfuse trace by ID. Returns timing, model, and public URL.
+
+transport:
+  - stdio

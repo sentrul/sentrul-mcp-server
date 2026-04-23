@@ -21,11 +21,12 @@ echo '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"sentrul_co
 
 ## 1. smithery.ai
 
-- [ ] Fork https://github.com/smithery-ai/registry
-- [ ] Copy `registry/smithery.yaml` → `servers/sentrul.yaml` in the fork
-- [ ] Open PR titled `Add sentrul-mcp-server`
-- [ ] Link to npm tarball + GitHub repo in PR body
-- [ ] Request review from any smithery maintainer
+**Correction 2026-04-22:** `smithery-ai/registry` is an issue-tracker repo, NOT a PR-based submission surface. Smithery uses auto-discovery from npm + claim-via-web-UI.
+
+- [ ] Visit https://smithery.ai/new and claim the package by pasting `sentrul-mcp-server`
+- [ ] Verify ownership via the GitHub OAuth handshake (the repo is at `sentrul/sentrul-mcp-server`)
+- [ ] Paste `registry/smithery.yaml` content into the metadata form (description, tools, config schema)
+- [ ] Submit — listing appears at https://smithery.ai/server/sentrul-mcp-server
 
 ## 2. Cline
 
@@ -46,12 +47,10 @@ echo '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"sentrul_co
 
 ## 5. awesome-mcp-servers
 
-- [ ] Fork https://github.com/punkpeye/awesome-mcp-servers
-- [ ] Insert line from `registry/awesome-mcp-entry.md` into the alphabetised list in the appropriate section
-  - primary: "Research / Knowledge"
-  - secondary consideration: "Security / Compliance"
-- [ ] Open PR titled `Add sentrul-mcp-server`
-- [ ] PR body: one-line why-it's-useful + link to npm tarball
+- [x] Fork https://github.com/punkpeye/awesome-mcp-servers ✅ `Ctt380/awesome-mcp-servers`
+- [x] Insert entry into 🔬 Research section (alphabetical: between `pminervini/deep-research-mcp` and `sh-patterson/legiscan-mcp`)
+- [x] Open PR titled `Add sentrul-mcp-server to Research section` → **punkpeye/awesome-mcp-servers#5246** (filed 2026-04-22)
+- [ ] Monitor for merge; address maintainer feedback if requested
 
 ## Post-submission
 

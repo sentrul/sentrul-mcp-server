@@ -1,0 +1,41 @@
+{
+  "name": "sentrul-mcp-server",
+  "version": "0.1.0",
+  "description": "Run Sentrul research, compliance, and trace-lookup agents from any MCP-aware client. 257 production agents behind one gateway.",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "Sentrul"
+  },
+  "homepage": "https://sentrul.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sentrul/sentrul-mcp-server"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./dist/index.js",
+  "bin": {
+    "sentrul-mcp-server": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "pnpm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.29.0",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0",
+    "vitest": "4.1.5"
+  }
+}
